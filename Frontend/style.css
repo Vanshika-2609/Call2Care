@@ -1,0 +1,175 @@
+/* Reset defaults */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: url('https://images.unsplash.com/photo-1581091012184-5c4c940de1c5') no-repeat center center/cover;
+    color: white;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 51, 102, 0.85);
+    padding: 15px 40px;
+    box-shadow: 0 0 20px #00aaff;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: #66ccff;
+    text-shadow: 0 0 5px #00ffff;
+    animation: glow 2s infinite alternate;
+    cursor: pointer;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    position: relative;
+    transition: 0.3s ease;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #66ccff;
+    transition: width 0.3s;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Main Content */
+.main-content {
+    padding: 80px 40px;
+    text-align: center;
+    background-color: rgba(0, 0, 50, 0.7);
+    margin: 60px auto;
+    max-width: 900px;
+    border-radius: 12px;
+    box-shadow: 0 0 25px #00aaff;
+}
+
+.main-content h1 {
+    font-size: 48px;
+    color: #66ccff;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #00ffff;
+}
+
+.main-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Upload Section */
+.upload-section {
+    margin-top: 20px;
+}
+
+input[type="file"] {
+    padding: 10px;
+    border-radius: 5px;
+    background: white;
+    color: black;
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #66ccff;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 10px #00aaff;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background-color: #3399ff;
+    color: white;
+}
+
+/* Steps Section */
+.steps {
+    margin-top: 40px;
+    text-align: left;
+    font-size: 18px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px #00aaff;
+}
+
+.steps h2 {
+    margin-bottom: 15px;
+    color: #66ccff;
+}
+
+/* Glowing animation for logo */
+@keyframes glow {
+    from {
+        text-shadow: 0 0 5px #00ffff;
+    }
+    to {
+        text-shadow: 0 0 20px #00ffff, 0 0 30px #00aaff;
+    }
+}
+
+/* Floating glow effect */
+.glow {
+    position: fixed;
+    top: -50px;
+    left: -50px;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(0,255,255,0.4), transparent 70%);
+    filter: blur(40px);
+    animation: float 10s infinite ease-in-out;
+    pointer-events: none;
+}
+
+@keyframes float {
+    0% { transform: translate(0,0); }
+    50% { transform: translate(50px, 50px); }
+    100% { transform: translate(0,0); }
+}
+/* Diagnosis result box */
+.result-box {
+    margin-top: 30px;
+    padding: 20px;
+    background: rgba(0, 255, 255, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 0 15px #00ffff;
+    font-size: 18px;
+    display: none;
+}
+
+.loading {
+    color: #66ccff;
+    font-style: italic;
+}

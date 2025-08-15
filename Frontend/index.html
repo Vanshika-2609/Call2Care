@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call2Care - Speech to Symptom Diagnosis</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">Call2Care</div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h1>Speech to Symptom Diagnosis</h1>
+        <p>
+            Call2Care is an AI-powered telemedicine tool that listens to your concerns, 
+            analyzes your speech, and detects possible symptoms. Our goal is to guide you 
+            towards timely diagnosis and the right medical attention.
+        </p>
+
+        <!-- File Upload -->
+        <div class="upload-section">
+            <input id="audioUpload" type="file" accept=".wav">
+            <button id="submitBtn">Submit</button>
+        </div>
+
+        <!-- Steps -->
+        <div class="steps">
+            <h2>How to Get Diagnosis</h2>
+            <p><strong>Step 1:</strong> Record your concerns in an audio file.</p>
+            <p><strong>Step 2:</strong> Upload the file above and click submit.</p>
+            <p><strong>Step 3:</strong> Receive AI-based diagnosis suggestions and recommended tests before visiting a doctor.</p>
+        </div>
+
+        <!-- Diagnosis Result -->
+        <div id="result" class="result-box"></div>
+    </div>
+
+    <!-- Floating Glow Animation -->
+    <div class="glow"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
